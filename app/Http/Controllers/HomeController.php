@@ -25,13 +25,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-       /*
+       
         $per=persona::All();
-*/
 
-        $per=DB::table("personas")
+
+        /*
+            $per=DB::table("personas")
             ->join('categorias', 'personas.categoria_id', '=', 'categorias.id')
-            ->get();
+            ->get();  */
         return view('home',compact('per')); 
     }
 }

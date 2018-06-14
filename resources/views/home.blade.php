@@ -23,7 +23,6 @@
                             <th scope="col">DNI</th>
                             <th scope="col">E-mail</th>
                             <th scope="col">Establecimiento</th>
-                            <th scope="col">Categoria</th>
                         </tr>   
                     </thead>
                                 
@@ -34,7 +33,6 @@
                                 <td>{{$Personas->dni}}</td>
                                 <td>{{$Personas->email}}</td>
                                 <td>{{$Personas->establecimiento}}</td>
-                                <td>{{$Personas->descripcion}}</td>
 
                             </tr>
                             @endforeach
