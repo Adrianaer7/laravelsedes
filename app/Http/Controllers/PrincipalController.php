@@ -18,6 +18,7 @@ class PrincipalController extends Controller
 
     public function agregar (Request $request){
 
+
    	$personas= new Persona;
 
     $personas-> dni= $request->dni;

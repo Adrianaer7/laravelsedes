@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Persona;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+       /*
+        $per=persona::All();
+*/
+
+        $per=DB::table("personas")
+            ->join('categorias', 'personas.categoria_id', '=', 'categorias.id')
+            ->get();
+        return view('home',compact('per')); 
     }
 }
